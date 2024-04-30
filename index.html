@@ -145,6 +145,16 @@
     display: inline-block;
     border: 2px solid #2e6eb5;
 }
+  .dark-mode {
+    background-color: black;
+    color: white;
+}
+
+
+
+.dark-mode .container {
+    background-color: darkgray;
+}
 </style>
 
 </head>
@@ -192,7 +202,7 @@
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->
 
-      <a href="#about" class="get-started-btn scrollto">ابدأ</a>
+      <a href="#about" id="darkModeToggle" onclick="toggleDarkMode()" class="get-started-btn scrollto">ابدأ</a>
 
     </div>
   </header><!-- End Header -->
@@ -945,7 +955,13 @@
 
   <div id="preloader"></div>
   <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
-
+  <script>
+  function toggleDarkMode() {
+    const body = document.body;
+    body.classList.toggle('dark-mode');
+}
+    
+  </script>
   <!-- Vendor JS Files -->
   <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
   <script src="assets/vendor/aos/aos.js"></script>
